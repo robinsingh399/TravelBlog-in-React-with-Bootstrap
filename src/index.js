@@ -2,12 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import {InfoProvider} from './components/context';
 import * as serviceWorker from './serviceWorker';
+import {BrowserRouter} from 'react-router-dom';
 
 ReactDOM.render(
+  <InfoProvider>
   <React.StrictMode>
+    <BrowserRouter>
     <App />
-  </React.StrictMode>,
+    </BrowserRouter>
+    
+  </React.StrictMode>
+  </InfoProvider>,
   document.getElementById('root')
 );
 
